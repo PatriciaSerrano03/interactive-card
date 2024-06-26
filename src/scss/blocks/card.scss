@@ -1,0 +1,37 @@
+.card{
+    width: 54%;
+    padding: 2rem;
+}
+.cardFront,.cardBack {
+    max-width: 28rem;
+    height: 15.5rem;
+    border-radius: 10px;
+    background-size: cover;
+    color: white;
+    position: relative;
+    padding: 32px
+}
+
+.cardFront {
+    background-image: url(../../images/bg-card-front.5aca8db4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 auto 32px;
+}
+.cardFront div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    word-spacing: 6px
+}
+
+.cardBack {
+    background-image: url(../../images/bg-card-back.503939c0.png);
+    background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 2rem 0 auto
+}
