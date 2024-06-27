@@ -9,49 +9,57 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <main class="main">
-      <section class="card">
-        <div class="cardFront">
-          <span>000 000 000 000</span>
-          <div>
-            <span>JANE APPLESEED</span>
-              <span><span>00</span> / <span>00</span></span>
+    <div class="aside">
+        <main class="main">
+        <div class="card__container">
+          <div class="card card__back">
+            <span class="card__cvc">000</span>
+          </div>
+  
+          <div class="card card__front">
+            <img class="card__logo" src="./images/card-logo.svg" alt="">
+            <span class="card__number">000 000 000 000</span>
+            <div class="card__info">
+              <span class="card__month">JANE APPLESEED</span>
+              <div class="card__date">
+                <span class="card__name">00</span>
+                <span>/</span>
+                <span class="card__year">00</span>
+              </div>
+            </div>
+            
           </div>
         </div>
-        <div class="cardBack">
-          <span>000</span>
+      </div>
+  
+      <form class="form">
+        <div class="form__field">
+          <label for="name" class="form__label">Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" name="name" class="form__input">
         </div>
-      </section>
-      
-      <section class="cardForm">
-        <form class="form">
-          <label class="name">
-            Cardholder Name
-            <input type="text" placeholder="Jane Appleseed" name="name" class="card-input">
-          </label>
-          <p class="info info__hidden"></p>
-
-          <label class="cardnumber">Card Number<input type="text" placeholder="1234 5678 9123 0000" name="number" class="card-input"></label>
-
-          <div class="cvc-mmyy">
-            <label class="labelmonth labelyear">Exp. Date (MM/YY)
-              <div>
-                <input type="text" placeholder="MM" name="mm" class="card-input">
-                <input type="text" placeholder="YY" name="yy" class="card-input">
-              </div>
-            </label>
-            <p class="info info__hidden"></p>
-            
-            <label class="labelcvc">CVC
-              <input type="text" placeholder="123" name="cvc" class="card-input"></label>
-              <p class="info info__hidden"></p>
-            </div>
-
-            <button type="submit" class="btn-submit">Confirm</button>
-        </form>
-      </section>
+  
+        <div class="form__field">
+          <label for="number" class="form__label">Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 000" name="name" class="form__input">
+        </div>
+  
+        <div class="form__container">
+            <div class="form__field">
+            <label for="day" class="form__label">Exp. Date (MM/YY)</label>
+            <input type="text" placeholder="MM" name="mm" class="form__input">
+            <input type="text" placeholder="YY" name="yy" class="form__input">
+          </div>
+  
+          <div class="form__field">
+            <label for="cvc" class="form__label">CVC</label>
+            <input type="text" placeholder="e.g. 123" name="cvc" class="form__input">
+          </div>
+        </div>
+        
+          <button type="submit" value="confirm" class="btn-submit">Confirm</button>
+      </form>
     </main>
-   
+
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

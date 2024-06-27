@@ -1,6 +1,13 @@
+@use '../mixins/responsive.scss' as *;
+
 .main{
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center
+    min-height: 100vh;
+
+    @include responsive(laptop){
+        flex-direction: row;
+    }
 }

@@ -1,0 +1,29 @@
+@use '../mixins/responsive.scss' as *;
+
+.form{
+    position: relative;
+    top: 350px;
+    width: 327px;
+    margin-inline: auto;
+
+    @include responsive(laptop){
+        top: 150px;
+        left: 349px;
+        }
+
+    &__field{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label{
+        margin-bottom: 0.562rem;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #21092f;
+    }
+
+    &__input{
+        margin-bottom: 1.25rem;
+    }
+}

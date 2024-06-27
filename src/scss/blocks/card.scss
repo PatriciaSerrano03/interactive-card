@@ -1,8 +1,100 @@
-.card{
-    width: 54%;
-    padding: 2rem;
+@use '../mixins/responsive.scss' as *;
+
+
+
+.card__container{
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    width: 343px;
+    height: 251px;
+    translate: -50%;
+
+    @include responsive (laptop){
+        top: 50%;
+        left: 164px;
+        width: 541px;
+        height: 527px;
+        translate: 0 -60%;
+    }
 }
-.cardFront,.cardBack {
+
+
+.card{
+    position: absolute;
+    width: 280px;
+    height: 150px;
+    background-size: cover;
+
+    @include responsive (laptop){
+        width: 447px;
+        height: 245px;
+    }
+
+    &__front{
+        top: 94px;
+        left: 0;
+        background-image: url(../../images/bg-card-front.5aca8db4.png);
+        
+    }
+
+    &__back{
+        top: 0;
+        right: 0;
+        background-image: url(../../images/bg-card-back.503939c0.png);
+        @include responsive (laptop){
+            top: 270px;
+         }
+    }
+
+    &__logo{
+        position: absolute;
+        width: 54px;
+        top: 17px;
+        left: 19px;
+    }
+
+    &__number{
+        position: absolute;
+        top: 84px;
+        left: 19px;
+        font-size: 18px;
+        @include responsive (laptop){
+            top: 130px;
+            font-size: 25px;
+         }
+    }
+
+    &__info{
+        position: absolute;
+        top: 124px;
+        left: 0;
+        padding-inline: 17px;
+        display: flex;
+        width: 100%;
+        font-size: 12px;
+        @include responsive (laptop){
+            top: 190px;
+            font-size: 17px;
+         }
+    }
+
+    &__date{
+        margin-left: auto;
+    }
+
+    &__cvc{
+        position: absolute;
+        top: 66px;
+        left: 218px;
+        @include responsive (laptop){
+            top: 111px;
+            font-size: 17px;
+         }
+    }
+
+}
+/* .cardFront,.cardBack {
     max-width: 28rem;
     height: 15.5rem;
     border-radius: 10px;
@@ -34,4 +126,4 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: 0 2rem 0 auto
-}
+} */
